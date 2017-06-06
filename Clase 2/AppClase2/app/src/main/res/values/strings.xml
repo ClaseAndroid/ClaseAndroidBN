@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AppClase2</string>
+
+
+    <!-- MainActivity -->
+    <string name="correo_electronico">Correo electronico</string>
+    <string name="contrasenia">Contraseña</string>
+    <string name="entrar">Entrar</string>
+    <string name="message_enter_email">Ingrese su correo electronico</string>
+    <string name="message_enter_password">Ingrese su Contraseña</string>
+
+
+</resources>
