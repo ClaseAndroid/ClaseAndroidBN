@@ -1,7 +1,9 @@
-package myapplication.project.com.appclase3;
+package myapplication.project.com.appclase3.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -14,6 +16,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import myapplication.project.com.appclase3.R;
+import myapplication.project.com.appclase3.adapter.ListViewAdapter;
+import myapplication.project.com.appclase3.adapter.RecyclerViewAdapter;
+import myapplication.project.com.appclase3.entity.User;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_clase2);
+        setContentView(R.layout.activity_main);
 
         initUI();
 

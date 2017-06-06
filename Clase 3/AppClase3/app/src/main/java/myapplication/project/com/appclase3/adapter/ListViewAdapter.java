@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import myapplication.project.com.appclase2.R;
+import myapplication.project.com.appclase3.R;
 
 /**
  * Created by OSP on 5/06/17.
