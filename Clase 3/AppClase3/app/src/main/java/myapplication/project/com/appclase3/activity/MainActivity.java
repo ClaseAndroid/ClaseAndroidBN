@@ -111,10 +111,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void loadData(){
-
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 

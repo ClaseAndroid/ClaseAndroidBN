@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">AppClase3</string>
+
+    <!-- DBActivity -->
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="dni">DNI</string>
+    <string name="agregar_usuario">Agregar usuario</string>
+    <string name="correo_electronico">Correo electronico</string>
+    <string name="ingrese_dni">Ingrese su número de DNI</string>
+    <string name="usuario_guardado">Usuario guardado correctamente</string>
+    <string name="no_exinten_coincidencias">No existen coincidencias</string>
+    <string name="usuario_borrado">Usuario borrado correctamente</string>
+    <string name="buscar">Buscar</string>
+    <string name="eliminar">Eliminar</string>
+
 </resources>
