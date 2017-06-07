@@ -14,4 +14,7 @@
     <string name="buscar">Buscar</string>
     <string name="eliminar">Eliminar</string>
 
+    <!-- ToolBarActivity -->
+    <string name="usuarios">USUARIOS</string>
+
 </resources>

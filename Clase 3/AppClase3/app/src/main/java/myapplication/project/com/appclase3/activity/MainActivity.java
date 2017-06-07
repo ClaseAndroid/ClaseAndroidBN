@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     private List<User> userList = new ArrayList<>();
     private List<String> stringList = new ArrayList<>();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
