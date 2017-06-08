@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">AppClase3</string>
-
+    <string name="app_name">AppClase4</string>
     <!-- DBActivity -->
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
@@ -14,8 +13,5 @@
     <string name="usuario_actualizado">Usuario actualizado correctamente</string>
     <string name="buscar">Buscar</string>
     <string name="eliminar">Eliminar</string>
-
-    <!-- ToolBarActivity -->
-    <string name="usuarios">USUARIOS</string>
 
 </resources>
