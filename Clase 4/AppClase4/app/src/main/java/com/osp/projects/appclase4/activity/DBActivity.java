@@ -1,11 +1,11 @@
-package myapplication.project.com.appclase3.activity;
+package com.osp.projects.appclase4.activity;
 
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,11 +13,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.List;
-
-import myapplication.project.com.appclase3.R;
-import myapplication.project.com.appclase3.db.AdminSQLiteOpenHelper;
-import myapplication.project.com.appclase3.entity.User;
+import com.osp.projects.appclase4.R;
+import com.osp.projects.appclase4.db.AdminSQLiteOpenHelper;
 
 public class DBActivity extends AppCompatActivity {
 
@@ -130,7 +127,7 @@ public class DBActivity extends AppCompatActivity {
     private void getListDataUserForDNI(String dni){
 
         AdminSQLiteOpenHelper adminSQLiteOpenHelper = new AdminSQLiteOpenHelper(this, "user", null, 1);
-        SQLiteDatabase bd = adminSQLiteOpenHelper.getWritableDatabase();
+        SQLiteDatabase bd = adminSQLiteOpenHelper.getReadableDatabase();
 
         Cursor cursor = bd.rawQuery("select name, lastName, email from user where dni = " + dni, null);
         String val = "";
