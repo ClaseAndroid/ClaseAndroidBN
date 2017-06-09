@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         stringList.add("MARIBEL");
         stringList.add("MARI LUZ");
 
-
         /**
          * Spinner
          */
