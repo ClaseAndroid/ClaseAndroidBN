@@ -22,7 +22,7 @@ import myapplication.project.com.appclase3.adapter.ListViewAdapter;
 import myapplication.project.com.appclase3.adapter.RecyclerViewAdapter;
 import myapplication.project.com.appclase3.entity.User;
 
-public class MainActivity extends AppCompatActivity {
+public class ColeccionAdapterActivity extends AppCompatActivity {
 
     private Spinner spnPersona;
     private ListView lviPersona;
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_coleccion_adapter);
 
         initUI();
 
