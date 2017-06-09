@@ -127,7 +127,7 @@ public class DBActivity extends AppCompatActivity {
     private void getListDataUserForDNI(String dni){
 
         AdminSQLiteOpenHelper adminSQLiteOpenHelper = new AdminSQLiteOpenHelper(this, "user", null, 1);
-        SQLiteDatabase bd = adminSQLiteOpenHelper.getWritableDatabase();
+        SQLiteDatabase bd = adminSQLiteOpenHelper.getReadableDatabase();
 
         Cursor cursor = bd.rawQuery("select name, lastName, email from user where dni = " + dni, null);
         String val = "";
