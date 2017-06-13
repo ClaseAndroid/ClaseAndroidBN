@@ -131,6 +131,7 @@ public class DBActivity extends AppCompatActivity {
 
         Cursor cursor = bd.rawQuery("select name, lastName, email from user where dni = " + dni, null);
         String val = "";
+
         while(cursor.moveToNext()){
             val = val + "Nombre : " + cursor.getString(0) + "\n" +
                         "Apellido : " + cursor.getString(1)+ "\n" +

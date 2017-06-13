@@ -93,9 +93,10 @@ public class ColeccionAdapterActivity extends AppCompatActivity {
         /**
          * ActionBar
          */
+
         getSupportActionBar().setDisplayShowHomeEnabled(true);// Para poder ver el icono del menu
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
-        getSupportActionBar().setTitle("PRUEBA ANDROID");
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher_round);
+        getSupportActionBar().setTitle("DEMO ANDROID");
 
     }
 
@@ -105,7 +106,6 @@ public class ColeccionAdapterActivity extends AppCompatActivity {
         lviPersona = (ListView) findViewById(R.id.lviPersona);
         gviPersona = (GridView) findViewById(R.id.gviPersona);
         rviPersona = (RecyclerView) findViewById(R.id.rviPersona);
-
 
     }
 
@@ -125,6 +125,18 @@ public class ColeccionAdapterActivity extends AppCompatActivity {
             case R.id.item1:
 
                 Toast.makeText(this, "MENU ITEM 1", Toast.LENGTH_SHORT).show();
+
+                break;
+
+            case R.id.item2:
+
+                Toast.makeText(this, "MENU ITEM 2", Toast.LENGTH_SHORT).show();
+
+                break;
+
+            case R.id.item3:
+
+                Toast.makeText(this, "MENU ITEM 3", Toast.LENGTH_SHORT).show();
 
                 break;
 

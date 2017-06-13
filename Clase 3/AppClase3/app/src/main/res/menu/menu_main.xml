@@ -15,11 +15,12 @@
         app:showAsAction="ifRoom" />
 
     <item android:title="Item3"
-        app:showAsAction="ifRoom" />
+        android:id="@+id/item3"
+        app:showAsAction="always" />
 
     <item android:title="Item4"
         android:icon="@mipmap/ic_launcher"
-        app:showAsAction="always|withText" />
+        app:showAsAction="ifRoom" />
 
     <item android:title="Item5"
         app:showAsAction="ifRoom" />
