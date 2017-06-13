@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_menu">
+
+        <item>Android 1.0 Apple Pie</item>
+        <item>Android 1.1 Banana Bread</item>
+        <item>Android 1.5 Cupcake</item>
+        <item>Android Version</item>
+
+    </string-array>
+
+</resources>
