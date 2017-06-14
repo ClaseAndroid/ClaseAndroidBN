@@ -3,8 +3,10 @@ package com.capacitacion.project.appclase6serviceasynctask;
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private Button butImage;
     private Button butProgress;
     private ImageView mImageView;
-    ProgressDialog mProgressDialog;
+    private ProgressDialog mProgressDialog;
+    private String url = "http://esphoto500x500.mnstatic.com/banco-de-arena-en-zanzibar_5805011.jpg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +44,28 @@ public class MainActivity extends AppCompatActivity {
                 launchProgressDialog();
             }
         });
-    }
 
+/*
+        final Handler handler = new Handler();
+
+        final Runnable r = new Runnable() {
+            public void run() {
+                Toast.makeText(MainActivity.this, "Cagando...", Toast.LENGTH_SHORT).show();
+                handler.postDelayed(this, 5000);
+            }
+        };
+
+        handler.post(r);
+*/
+
+/*
+
+        startService(new Intent(MainActivity.this, ServicePrueba.class));
+*/
+
+    new UploadImage().execute(url);
+
+    }
 
     /**
      * Cargamos la imagen desde internet en el hilo de interfaz de usuario de nuestra aplicación.
@@ -61,9 +84,10 @@ public class MainActivity extends AppCompatActivity {
                 return null;
             }
 
+
             public void run() {
                 // Ejecutamos el código definido.
-                String url = "http://esphoto500x500.mnstatic.com/banco-de-arena-en-zanzibar_5805011.jpg";
+
                 final Bitmap mBitmap = loadImageFromNetwork(url);
 
                 mImageView.post(new Runnable() {
@@ -74,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }).start();
     }
+
+
     public void launchProgressDialog() {
         mProgressDialog = new ProgressDialog(MainActivity.this);
         mProgressDialog.setTitle("Simulando descarga ...");
@@ -101,4 +127,45 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private class UploadImage extends AsyncTask<String, Integer, Bitmap> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            mProgressDialog = new ProgressDialog(MainActivity.this);
+            mProgressDialog.setTitle("Simulando descarga ...");
+            mProgressDialog.setMessage("Descarga en progreso ...");
+            mProgressDialog.setProgressStyle(mProgressDialog.STYLE_SPINNER);
+            mProgressDialog.show();
+
+        }
+
+        @Override
+        protected Bitmap doInBackground(String... strings) {
+            try {
+                Bitmap mBitmap = BitmapFactory.decodeStream((InputStream) new URL(strings[0]).getContent());
+
+                return mBitmap;
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+            //mProgressDialog.incrementProgressBy(values[0]);
+            Log.i("CARGANDO IMAGEN", " - " + values[0]);
+
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            super.onPostExecute(bitmap);
+            mProgressDialog.dismiss();
+            mImageView.setImageBitmap(bitmap);
+        }
+    }
 }
