@@ -1,4 +1,4 @@
-package com.capacitacion.project.appclase5.fragment;
+package com.capacitacion.project.appclase6.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,8 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.capacitacion.project.appclase5.R;
-import com.capacitacion.project.appclase5.view.OnFragmentInteractionListener;
+import com.capacitacion.project.appclase6.R;
+import com.capacitacion.project.appclase6.view.OnFragmentInteractionListener;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

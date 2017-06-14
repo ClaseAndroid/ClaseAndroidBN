@@ -1,13 +1,13 @@
-package com.capacitacion.project.appclase5;
+package com.capacitacion.project.appclase6;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import com.capacitacion.project.appclase5.adapter.ScreenSlidePagerAdapter;
-import com.capacitacion.project.appclase5.model.VersionAndroidEntity;
-import com.capacitacion.project.appclase5.view.OnFragmentInteractionListener;
+import com.capacitacion.project.appclase6.adapter.ScreenSlidePagerAdapter;
+import com.capacitacion.project.appclase6.model.VersionAndroidEntity;
+import com.capacitacion.project.appclase6.view.OnFragmentInteractionListener;
 
 import java.util.ArrayList;
 import java.util.List;

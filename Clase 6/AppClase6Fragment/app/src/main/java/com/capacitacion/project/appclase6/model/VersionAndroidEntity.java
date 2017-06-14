@@ -1,4 +1,4 @@
-package com.capacitacion.project.appclase5.model;
+package com.capacitacion.project.appclase6.model;
 
 import java.io.Serializable;
 

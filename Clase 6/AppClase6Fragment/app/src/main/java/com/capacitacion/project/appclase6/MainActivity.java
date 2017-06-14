@@ -1,4 +1,4 @@
-package com.capacitacion.project.appclase5;
+package com.capacitacion.project.appclase6;
 
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -13,9 +13,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.capacitacion.project.appclase5.fragment.CupcakeFragment;
-import com.capacitacion.project.appclase5.fragment.VersionAndroidFragment;
-import com.capacitacion.project.appclase5.view.OnFragmentInteractionListener;
+import com.capacitacion.project.appclase6.fragment.CupcakeFragment;
+import com.capacitacion.project.appclase6.fragment.VersionAndroidFragment;
+import com.capacitacion.project.appclase6.view.OnFragmentInteractionListener;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

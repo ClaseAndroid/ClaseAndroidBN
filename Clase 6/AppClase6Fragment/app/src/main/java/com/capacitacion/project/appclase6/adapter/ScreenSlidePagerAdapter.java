@@ -1,11 +1,11 @@
-package com.capacitacion.project.appclase5.adapter;
+package com.capacitacion.project.appclase6.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.capacitacion.project.appclase5.model.VersionAndroidEntity;
-import com.capacitacion.project.appclase5.fragment.VersionAndroidFragment;
+import com.capacitacion.project.appclase6.model.VersionAndroidEntity;
+import com.capacitacion.project.appclase6.fragment.VersionAndroidFragment;
 
 import java.util.List;
 
