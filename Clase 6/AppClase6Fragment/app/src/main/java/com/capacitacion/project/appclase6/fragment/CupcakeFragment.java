@@ -13,9 +13,6 @@ import android.widget.TextView;
 import com.capacitacion.project.appclase6.R;
 import com.capacitacion.project.appclase6.view.OnFragmentInteractionListener;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -29,11 +26,17 @@ public class CupcakeFragment extends Fragment {
     private static final String ARG_PARAM1 = "nameVersion";
     private static final String ARG_PARAM2 = "imageVersion";
 
+    /*
     @Bind(R.id.tviTitle) TextView tviTile;
     @Bind(R.id.iviAndroid) ImageView iviAndroid;
     @Bind(R.id.butApplePie) Button butApplePie;
     @Bind(R.id.butBananBread) Button butBananBread;
+*/
 
+    private TextView tviTile;
+    private ImageView iviAndroid;
+    private Button butApplePie;
+    private Button butBananBread;
     private OnFragmentInteractionListener mListener;
     private String nameVersion;
     private int imageVersion;
@@ -71,7 +74,13 @@ public class CupcakeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_cupcake, container, false);
-        ButterKnife.bind(this, view);
+       // ButterKnife.bind(this, view);
+
+        tviTile = (TextView) view.findViewById(R.id.tviTitle);
+        iviAndroid = (ImageView) view.findViewById(R.id.iviAndroid);
+        butApplePie = (Button) view.findViewById(R.id.butApplePie);
+        butBananBread = (Button) view.findViewById(R.id.butBananBread);
+
         initUI();
 
         return view;

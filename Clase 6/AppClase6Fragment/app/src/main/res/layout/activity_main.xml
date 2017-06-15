@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.project.jebus.appclase5.MainActivity">
+    android:fitsSystemWindows="true">
 
     <LinearLayout
         android:orientation="vertical"
@@ -38,7 +37,9 @@
                 android:divider="@android:color/transparent"
                 android:dividerHeight="0dp"
                 android:background="#111"/>
+
         </android.support.v4.widget.DrawerLayout>
+
     </LinearLayout>
 
 

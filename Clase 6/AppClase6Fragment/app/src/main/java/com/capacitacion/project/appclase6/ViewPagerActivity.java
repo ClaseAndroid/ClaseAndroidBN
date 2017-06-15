@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 import com.capacitacion.project.appclase6.adapter.ScreenSlidePagerAdapter;
 import com.capacitacion.project.appclase6.model.VersionAndroidEntity;
@@ -12,21 +13,26 @@ import com.capacitacion.project.appclase6.view.OnFragmentInteractionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
 
 public class ViewPagerActivity extends AppCompatActivity implements OnFragmentInteractionListener {
 
+    /*
     @Bind(R.id.toolbar) Toolbar toolbar;
     @Bind(R.id.pager) ViewPager mPager;
+*/
 
+    private Toolbar toolbar;
+    private ViewPager mPager;
     private List<VersionAndroidEntity> versionAndroidEntityList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager);
-        ButterKnife.bind(this);
+        //ButterKnife.bind(this);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        mPager = (ViewPager) findViewById(R.id.pager);
 
         initUI();
         loadData();
@@ -45,6 +51,23 @@ public class ViewPagerActivity extends AppCompatActivity implements OnFragmentIn
         loadDataVersionAndroid();
         ScreenSlidePagerAdapter mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager(), versionAndroidEntityList);
         mPager.setAdapter(mPagerAdapter);
+
+        mPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                Toast.makeText(ViewPagerActivity.this, ""+position, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     private void loadDataVersionAndroid(){

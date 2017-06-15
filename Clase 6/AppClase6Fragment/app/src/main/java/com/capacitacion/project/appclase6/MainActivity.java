@@ -12,19 +12,22 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.capacitacion.project.appclase6.fragment.CupcakeFragment;
 import com.capacitacion.project.appclase6.fragment.VersionAndroidFragment;
 import com.capacitacion.project.appclase6.view.OnFragmentInteractionListener;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
 public class MainActivity extends AppCompatActivity implements OnFragmentInteractionListener {
 
+    /*
     @Bind(R.id.left_drawer) ListView mDrawerList;
     @Bind(R.id.drawer_layout) DrawerLayout  mDrawerLayout;
     @Bind(R.id.toolbar) Toolbar toolbar;
+*/
+    private ListView mDrawerList;
+    private DrawerLayout  mDrawerLayout;
+    private Toolbar toolbar;
 
     private String[] versionAndroid;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -33,7 +36,11 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+        //ButterKnife.bind(this);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
         setSupportActionBar(toolbar);
 
@@ -56,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
                //getActionBar().setTitle(mTitle);
+                //Toast.makeText(MainActivity.this, "CErrado", Toast.LENGTH_SHORT).show();
             }
 
             /** Called when a drawer has settled in a completely open state. */

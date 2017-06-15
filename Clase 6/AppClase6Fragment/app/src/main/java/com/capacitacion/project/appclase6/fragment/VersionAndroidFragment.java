@@ -12,9 +12,6 @@ import android.widget.TextView;
 import com.capacitacion.project.appclase6.R;
 import com.capacitacion.project.appclase6.view.OnFragmentInteractionListener;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -27,10 +24,12 @@ public class VersionAndroidFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "nameVersion";
     private static final String ARG_PARAM2 = "imageVersion";
-
+/*
     @Bind(R.id.tviTitle) TextView tviTile;
     @Bind(R.id.iviAndroid) ImageView iviAndroid;
-
+*/
+    private TextView tviTile;
+    private ImageView iviAndroid;
     private OnFragmentInteractionListener mListener;
     private String nameVersion;
     private int imageVersion;
@@ -44,6 +43,7 @@ public class VersionAndroidFragment extends Fragment {
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, nameVersion);
         args.putInt(ARG_PARAM2, imageVersion);
+        //fragment.imageVersion = imageVersion;
         fragment.setArguments(args);
         return fragment;
     }
@@ -68,7 +68,11 @@ public class VersionAndroidFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_version_android, container, false);
-        ButterKnife.bind(this, view);
+        //ButterKnife.bind(this, view);
+
+        tviTile = (TextView)  view.findViewById(R.id.tviTitle);
+        iviAndroid = (ImageView)  view.findViewById(R.id.iviAndroid);
+
         initUI();
 
         return view;
