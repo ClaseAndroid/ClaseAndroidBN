@@ -1,15 +1,20 @@
 package com.capacitacion.project.appclase6serviceasynctask;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.capacitacion.project.appclase6serviceasynctask.service.ServicePrueba;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -41,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         butProgress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchProgressDialog();
+                //launchProgressDialog();
+                stopService(new Intent(MainActivity.this, ServicePrueba.class));
             }
         });
 
@@ -51,19 +57,19 @@ public class MainActivity extends AppCompatActivity {
         final Runnable r = new Runnable() {
             public void run() {
                 Toast.makeText(MainActivity.this, "Cagando...", Toast.LENGTH_SHORT).show();
-                handler.postDelayed(this, 5000);
+              //  handler.postDelayed(this, 5000);
             }
         };
 
-        handler.post(r);
+        handler.postDelayed(r, 5000);
 */
 
-/*
+
 
         startService(new Intent(MainActivity.this, ServicePrueba.class));
-*/
+        //stopService(new Intent(MainActivity.this, ServicePrueba.class));
 
-    new UploadImage().execute(url);
+ //   new UploadImage(url).execute();
 
     }
 
@@ -127,7 +133,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private class UploadImage extends AsyncTask<String, Integer, Bitmap> {
+    private class UploadImage extends AsyncTask<Void, Integer, Bitmap> {
+
+        String url;
+
+        public UploadImage(String url){
+            this.url = url;
+        }
 
         @Override
         protected void onPreExecute() {
@@ -141,9 +153,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected Bitmap doInBackground(String... strings) {
+        protected Bitmap doInBackground(Void... strings) {
             try {
-                Bitmap mBitmap = BitmapFactory.decodeStream((InputStream) new URL(strings[0]).getContent());
+                Bitmap mBitmap = BitmapFactory.decodeStream((InputStream) new URL(url).getContent());
 
                 return mBitmap;
             }
@@ -151,14 +163,6 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             return null;
-        }
-
-        @Override
-        protected void onProgressUpdate(Integer... values) {
-            super.onProgressUpdate(values);
-            //mProgressDialog.incrementProgressBy(values[0]);
-            Log.i("CARGANDO IMAGEN", " - " + values[0]);
-
         }
 
         @Override

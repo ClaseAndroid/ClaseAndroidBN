@@ -17,6 +17,7 @@ public class ServicePrueba extends Service {
     private static final String TAG = ServicePrueba.class.getName();
 
     private Handler handler = new Handler();
+    private boolean state = false;
 
     public ServicePrueba(){
 
@@ -32,8 +33,6 @@ public class ServicePrueba extends Service {
     public void onCreate() {
         super.onCreate();
 
-
-
         Log.i(TAG, "Servicio creado...");
     }
 
@@ -43,22 +42,25 @@ public class ServicePrueba extends Service {
 
         final Runnable r = new Runnable() {
             public void run() {
-                Log.i("HILO", "CARGANDO...");
 
-                Toast.makeText(getApplicationContext(), "Cagando...", Toast.LENGTH_SHORT).show();
+                if(!state){
+                    Log.i("HILO", "CARGANDO...");
+
+                    Toast.makeText(getApplicationContext(), "Cagando...", Toast.LENGTH_SHORT).show();
+                }
                 handler.postDelayed(this, 5000);
             }
         };
 
         handler.post(r);
 
-        return START_STICKY;
+        return START_NOT_STICKY;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         Log.i(TAG, "Servicio destruido...");
-
+        state = true;
     }
 }
