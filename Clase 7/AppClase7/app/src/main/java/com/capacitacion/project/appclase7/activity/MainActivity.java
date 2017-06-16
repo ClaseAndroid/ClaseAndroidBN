@@ -1,7 +1,9 @@
 package com.capacitacion.project.appclase7.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +13,7 @@ import com.capacitacion.project.appclase7.domain.User;
 import com.capacitacion.project.appclase7.rest.ApiClient;
 import com.capacitacion.project.appclase7.rest.raw.LoginRaw;
 import com.capacitacion.project.appclase7.rest.response.LoginResponse;
+import com.capacitacion.project.appclase7.utils.JsonUtils;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -71,12 +74,30 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 rlaLoading.setVisibility(View.GONE);
+                Log.i("LOGIN RESPONSE", " - " + JsonUtils.generateJSONObject(response.body()).toString());
+
+                LoginResponse loginResponse = response.body();
+
+                User user = new User();
+                user.setEmail(loginResponse.getEmail());
+                user.setDni(loginResponse.getDni());
+                user.setId(loginResponse.getId());
+                user.setName(loginResponse.getName());
+                user.setLastName(loginResponse.getLastname());
+                user.setImage(loginResponse.getImage());
+
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("USER", user);
+                Intent intent = new Intent(MainActivity.this, ListFriendActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
 
             }
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable throwable) {
                 rlaLoading.setVisibility(View.GONE);
+                Log.i("LOGIN", " - FAIL");
 
             }
         });

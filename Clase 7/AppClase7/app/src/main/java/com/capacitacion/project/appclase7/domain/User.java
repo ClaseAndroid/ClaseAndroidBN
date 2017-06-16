@@ -1,17 +1,27 @@
 package com.capacitacion.project.appclase7.domain;
 
+import java.io.Serializable;
+
 /**
  * Created by Jesus on 15/06/17.
  */
 
-public class User {
+public class User implements Serializable {
 
     private String id;
     private String name;
     private String lastName;
     private String dni;
     private String email;
+    private String image;
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public String getId() {
         return id;

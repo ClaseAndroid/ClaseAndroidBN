@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ListFriendActivity"></activity>
+        <activity android:name=".activity.ListFriendActivity" />
+        <activity android:name=".activity.DetailFriendActivity"></activity>
     </application>
 
 </manifest>

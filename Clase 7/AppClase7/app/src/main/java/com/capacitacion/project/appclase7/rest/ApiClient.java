@@ -2,13 +2,17 @@ package com.capacitacion.project.appclase7.rest;
 
 import com.capacitacion.project.appclase7.domain.User;
 import com.capacitacion.project.appclase7.rest.raw.LoginRaw;
+import com.capacitacion.project.appclase7.rest.response.DetailFriendResponse;
+import com.capacitacion.project.appclase7.rest.response.ListFriendResponse;
 import com.capacitacion.project.appclase7.rest.response.LoginResponse;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
-import retrofit2.GsonConverterFactory;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
@@ -21,13 +25,18 @@ import retrofit2.http.Query;
 
 public class ApiClient {
 
-    private static String PATH = "http://www.google.com";
+    private static String PATH = "http://dev-foodcourt.osp.pe/api/v1/proof/";
     private static  Retrofit retrofit;
 
     public static ApiInterface getApiInterface(){
 
+        OkHttpClient.Builder builder = new OkHttpClient.Builder();
+        builder.readTimeout(60, TimeUnit.SECONDS).connectTimeout(60, TimeUnit.SECONDS);
+
+
         retrofit = new Retrofit.Builder()
                 .baseUrl(PATH)
+                .client(builder.build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -42,14 +51,14 @@ public class ApiClient {
         // Request method and URL specified in the annotation
         // Callback for the parsed response is the last parameter
 
-        @POST("users/login")
+        @POST("login")
         Call<LoginResponse> loginUser(@Body LoginRaw loginRaw);
 
-        @GET("friend/{idFriend}")
-        Call<User> getFriend(@Path("idFriend") String idFriend);
+        @GET("friends/{idUser}")
+        Call<ListFriendResponse> getListFriendForId(@Path("idUser") String idUser);
 
-        @GET("friend")
-        Call<List<User>> getDetailFriend(@Query("email") String email);
+        @GET("friends-detail")
+        Call<DetailFriendResponse> getDetailFriendForId(@Query("id") String idFriend);
 
 
     }

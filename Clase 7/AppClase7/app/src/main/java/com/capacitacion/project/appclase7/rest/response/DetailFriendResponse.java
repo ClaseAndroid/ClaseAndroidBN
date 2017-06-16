@@ -4,14 +4,13 @@ package com.capacitacion.project.appclase7.rest.response;
  * Created by Jesus on 15/06/17.
  */
 
-public class LoginResponse {
+public class DetailFriendResponse {
 
     private String id;
     private String name;
     private String lastname;
-    private String dni;
-    private String email;
     private String image;
+    private String dni;
 
     public String getId() {
         return id;
@@ -37,27 +36,19 @@ public class LoginResponse {
         this.lastname = lastname;
     }
 
-    public String getDni() {
-        return dni;
-    }
-
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getImage() {
         return image;
     }
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 }
