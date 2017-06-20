@@ -1,6 +1,7 @@
 package com.capacitacion.project.appclase7.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by Jesus on 15/06/17.
@@ -13,6 +14,15 @@ public class Friend implements Serializable {
     private String lastname;
     private String image;
     private String dni;
+    private List<Friend> friendList;
+
+    public List<Friend> getFriendList() {
+        return friendList;
+    }
+
+    public void setFriendList(List<Friend> friendList) {
+        this.friendList = friendList;
+    }
 
     public String getId() {
         return id;

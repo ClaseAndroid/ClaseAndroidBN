@@ -1,5 +1,9 @@
 package com.capacitacion.project.appclase7.rest.response;
 
+import com.capacitacion.project.appclase7.domain.Friend;
+
+import java.util.List;
+
 /**
  * Created by Jesus on 15/06/17.
  */
@@ -11,6 +15,15 @@ public class DetailFriendResponse {
     private String lastname;
     private String image;
     private String dni;
+    private List<Friend> listfriends;
+
+    public List<Friend> getListfriends() {
+        return listfriends;
+    }
+
+    public void setListfriends(List<Friend> listfriends) {
+        this.listfriends = listfriends;
+    }
 
     public String getId() {
         return id;

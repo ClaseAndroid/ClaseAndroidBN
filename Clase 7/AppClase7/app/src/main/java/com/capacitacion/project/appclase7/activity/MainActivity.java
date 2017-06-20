@@ -47,10 +47,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                /*
                 String email = eteEmail.getText().toString();
                 String password = etePassword.getText().toString();
 
                 loginUser(email, password);
+            */
+                startActivity(new Intent(MainActivity.this, Main2Activity.class));
             }
         });
 
@@ -77,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("LOGIN RESPONSE", " - " + JsonUtils.generateJSONObject(response.body()).toString());
 
                 LoginResponse loginResponse = response.body();
-
                 User user = new User();
                 user.setEmail(loginResponse.getEmail());
                 user.setDni(loginResponse.getDni());

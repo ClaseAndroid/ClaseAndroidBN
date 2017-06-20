@@ -64,6 +64,9 @@ public class DetailFriendActivity extends AppCompatActivity {
         if(friend.getName() != null) tviName.setText(friend.getName());
         if(friend.getLastname() != null) tviLastName.setText(friend.getLastname());
         if(friend.getDni() != null) tviDNI.setText(friend.getDni());
+
+
+
     }
 
     private void getListFriendForIdUser(String idFriend){
@@ -87,6 +90,7 @@ public class DetailFriendActivity extends AppCompatActivity {
                 friend.setImage(detailFriendResponse.getImage());
                 friend.setId(detailFriendResponse.getId());
                 friend.setLastname(detailFriendResponse.getLastname());
+                friend.setFriendList(detailFriendResponse.getListfriends());
                 loadDataFriend(friend);
 
             }
