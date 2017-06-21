@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_red">
+
+
+    <View
+        android:id="@+id/vKitkat"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@color/color_red"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@+id/vKitkat"
+        android:id="@+id/linearLayout"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/spnCountry"
+                android:background="@drawable/shape_round_stroke_white"
+                android:layout_marginRight="5dp"
+                android:padding="7dp" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/imageView"
+                android:src="@drawable/ic_arrow_bootom"
+                android:adjustViewBounds="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/rlaContentCity"
+            android:background="@drawable/shape_round_stroke_white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/tviCity"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_white"
+                android:textSize="14dp"
+                android:singleLine="true"
+                android:layout_marginLeft="7dp"
+                android:layout_toLeftOf="@+id/imageView2"
+                android:layout_toStartOf="@+id/imageView2"
+                android:text="@string/ciudad" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/imageView2"
+                android:src="@drawable/ic_arrow_bootom"
+                android:adjustViewBounds="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/iviUserFacebook"
+            android:layout_marginLeft="7dp"
+            android:adjustViewBounds="true" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rviVideo"
+        android:background="@color/color_white_2"
+        android:layout_below="@+id/linearLayout">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlaContentSpinnerCity"
+        android:layout_below="@+id/linearLayout"
+        android:clickable="true"
+        android:visibility="gone"
+        android:layout_marginTop="-60dp">
+
+        <ExpandableListView
+            android:id="@+id/elviCity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:dividerHeight="1dp"
+            android:divider="@color/list_divider"
+            android:listSelector="@drawable/list_selector"
+            android:background="@color/list_background"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="visible"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_loading"
+        android:visibility="gone"
+        android:id="@+id/incLoading" />
+
+</RelativeLayout>

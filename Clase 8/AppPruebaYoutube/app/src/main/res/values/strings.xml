@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MusicMapp</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- MainActivity -->
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="ingresa_con">Ingresa con:</string>
+    <string name="turismo_musical">TURISMO MUSICAL</string>
+    <string name="token_youtube">AIzaSyA5Pm05wRhcA9cWHX28mTQ3EObCUblCAqM</string>
+    <string name="facebook_app_id">119805288404324</string>
+    <string name="musica_peru">Música Perú</string>
+    <string name="ciudad">Ciudad</string>
+
+    <string name="title_activity_list_video">ListVideoActivity</string>
+
+    <string name="title_activity_video_youtube">VideoYoutubeActivity</string>
+
+</resources>

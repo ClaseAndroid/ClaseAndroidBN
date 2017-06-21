@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_red">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="50dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80dp"
+                android:src="@drawable/ic_logo"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:id="@+id/imageView4"
+                android:src="@drawable/ic_arrow_top"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingresa_con"
+                android:id="@+id/textView"
+                android:textColor="@color/color_gray" />
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/butFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="@string/twitter"
+                android:id="@+id/butTwitter"
+                android:background="@color/color_light_blue"
+                android:textColor="@color/color_white"
+                android:layout_marginTop="7dp"
+                android:textSize="15dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

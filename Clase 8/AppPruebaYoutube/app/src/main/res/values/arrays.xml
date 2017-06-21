@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="array_country">
+        <item>Perú</item>
+    </array>
+
+    <array name="array_city">
+        <item>AMAZONAS</item>
+        <item>ÁNCASH</item>
+        <item>APURIMAC</item>
+        <item>AREQUIPA</item>
+        <item>AYACUCHO</item>
+        <item>CAJAMARCA</item>
+        <item>CALLAO</item>
+        <item>CUSCO</item>
+        <item>HUANCAVELICA</item>
+        <item>HUÁNUCO</item>
+        <item>ICA</item>
+        <item>JUNIN</item>
+        <item>LA LIBERTAD</item>
+        <item>LAMBAYEQUE</item>
+        <item>LIMA</item>
+        <item>LORETO</item>
+        <item>MADRE DE DIOS</item>
+        <item>MOQUEGUA</item>
+        <item>PASCO</item>
+        <item>PIURA</item>
+        <item>PUNO</item>
+        <item>SAN MARTIN</item>
+        <item>TACNA</item>
+        <item>TUMBES</item>
+        <item>UCAYALI</item>
+    </array>
+    
+    <array name="array_amazonas">
+        <item>Bagua</item>
+        <item>Bagua grande</item>
+        <item>Chachapoyas</item>
+    </array>
+
+    <array name="array_ancash">
+        <item>Casma</item>
+        <item>Chimbote</item>
+        <item>Huaraz</item>
+        <item>Huarmey</item>
+    </array>
+
+    <array name="array_apurimac">
+        <item>Abancay</item>
+        <item>Andahuaylas</item>
+    </array>
+
+    <array name="array_arequipa">
+        <item>Arequipa</item>
+        <item>Camaná</item>
+        <item>Mollendo</item>
+    </array>
+
+    <array name="array_ayacucho">
+        <item>Ayacucho</item>
+        <item>Huanta</item>
+    </array>
+
+    <array name="array_cajamarca">
+        <item>Cajamarca</item>
+        <item>Celendín</item>
+        <item>Chota</item>
+        <item>Jaén</item>
+    </array>
+
+    <array name="array_callao">
+        <item>Callao</item>
+    </array>
+
+    <array name="array_cusco">
+        <item>Cusco</item>
+        <item>Espinar</item>
+        <item>Quillabamba</item>
+        <item>Sicuani</item>
+    </array>
+
+    <array name="array_huancavelica">
+        <item>Huancavelica</item>
+    </array>
+
+    <array name="array_huanuco">
+        <item>Huánuco</item>
+        <item>Tingo María</item>
+    </array>
+
+    <array name="array_ica">
+        <item>Chincha</item>
+        <item>Ica</item>
+        <item>Nasca</item>
+        <item>Pisco</item>
+    </array>
+
+    <array name="array_junin">
+        <item>Huancayo</item>
+        <item>Jauja</item>
+        <item>La Oroya</item>
+        <item>Tarma</item>
+    </array>
+
+    <array name="array_la_libertad">
+        <item>Casa Grande</item>
+        <item>Chepén</item>
+        <item>Guadalupe</item>
+        <item>Pacasmayo</item>
+        <item>Trujillo</item>
+    </array>
+
+    <array name="array_lambayeque">
+        <item>Chiclayo</item>
+        <item>Ferreñafe</item>
+        <item>Lambayeque</item>
+        <item>Monsefú</item>
+    </array>
+
+    <array name="array_lima">
+        <item>Barranca</item>
+        <item>Cañete</item>
+        <item>Chancay</item>
+        <item>Huacho</item>
+        <item>Huaral</item>
+        <item>Lima</item>
+        <item>Paramonga</item>
+    </array>
+
+    <array name="array_loreto">
+        <item>Iquitos</item>
+        <item>Requena</item>
+        <item>Yurimaguas</item>
+    </array>
+
+    <array name="array_madre_de_dios">
+        <item>Puerto Maldonado</item>
+    </array>
+
+    <array name="array_moquegua">
+        <item>Ilo</item>
+        <item>Moquegua</item>
+    </array>
+
+    <array name="array_pasco">
+        <item>Cerro de Pasco</item>
+    </array>
+
+    <array name="array_piura">
+        <item>Catacaos</item>
+        <item>Chulucanas</item>
+        <item>Sechura</item>
+        <item>Sullana</item>
+        <item>Paita</item>
+        <item>Piura</item>
+        <item>Talara</item>
+    </array>
+
+    <array name="array_puno">
+        <item>Azángaro</item>
+        <item>Juliaca</item>
+        <item>Puno</item>
+    </array>
+
+    <array name="array_san_martin">
+        <item>Juanjuí</item>
+        <item>Moyobamba</item>
+        <item>Rioja</item>
+        <item>Tarapoto</item>
+    </array>
+
+    <array name="array_tacna">
+        <item>Tacna</item>
+    </array>
+
+    <array name="array_tumbes">
+        <item>Tumbes</item>
+        <item>Zarumilla</item>
+    </array>
+
+    <array name="array_ucayali">
+        <item>Pucallpa</item>
+    </array>
+
+</resources>
