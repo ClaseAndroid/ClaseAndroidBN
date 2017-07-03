@@ -1,6 +1,8 @@
 package com.capacitacion.project.clase8.activity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +21,8 @@ import com.facebook.internal.CallbackManagerImpl;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.model.SharePhoto;
+import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
 
 public class MainActivity extends AppCompatActivity {
@@ -74,11 +78,27 @@ public class MainActivity extends AppCompatActivity {
         butShareURL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                /*
                 ShareLinkContent content = new ShareLinkContent.Builder()
-                        .setContentUrl(Uri.parse("https://developers.facebook.com"))
+                        .setContentUrl(Uri.parse("https://www.google.com"))
                         .build();
                 ShareDialog shareDialog = new ShareDialog(MainActivity.this);
                 shareDialog.show(content);
+                */
+
+                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher_round);
+
+                SharePhoto photo = new SharePhoto.Builder()
+                        .setBitmap(bitmap)
+                        .build();
+                SharePhotoContent content = new SharePhotoContent.Builder()
+                        .addPhoto(photo)
+                        .build();
+
+                ShareDialog shareDialog = new ShareDialog(MainActivity.this);
+                shareDialog.show(content);
+
             }
         });
 
